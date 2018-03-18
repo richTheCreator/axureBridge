@@ -1,24 +1,27 @@
 $(document).ready(function() {
   console.log('-----> Loaded outside dep via rawgit!')
 
+  // ----- USA PHONE NUMBER FORMATTING -----
 
-// USA PHONE NUMBER FORMATTING
   // list of axure cell inputs
   var cell1 = '[data-label="TF-Form-Cell"] input';
 
   // Format the phone number as the user types it
-  $(cell1).addEventListener('keyup', function(evt) {
+  $(cell1).keyup(function(evt) {
     var phoneNumber = $(cell1);
+    var formatted = phoneFormat($(cell1).val());
+
     var charCode = (evt.which)
       ? evt.which
       : evt.keyCode;
-    phoneNumber.value = phoneFormat(phoneNumber.value);
+    phoneNumber.val(formatted)
   });
 
-  // We need to manually format the phone number on page load
-  $(cell1).value = phoneFormat($(cell1));
+  // Init on page load
+  var format = phoneFormat($(cell1).val());
+  $(cell1).val(format);
 
-  // A function to determine if the pressed key is an integer
+  // Only integers
   function numberPressed(evt) {
     var charCode = (evt.which)
       ? evt.which
@@ -29,7 +32,7 @@ $(document).ready(function() {
     return true;
   }
 
-  // A function to format text to look like a phone number
+  // USA formatting
   function phoneFormat(input) {
     // Strip all characters from the input except digits
     input = input.replace(/\D/g, '');
