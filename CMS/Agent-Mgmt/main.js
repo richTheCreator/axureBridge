@@ -3,13 +3,44 @@ $(document).ready(function() {
 
   // ----- USA PHONE NUMBER FORMATTING -----
 
-  // list of axure cell inputs
-  var cell1 = '[data-label="TF-Form-Cell"] input';
+  // list of axure phone number inputs
+  var cellF = '[data-label="TF-Form-Cell"] input';
+  var cellL = '[data-label="TF-Live-Cell"] input';
+  var faxF = '[data-label="TF-Form-Fax"] input';
+  var faxL = '[data-label="TF-Live-Fax"] input';
+  var officeF = '[data-label="TF-Form-Office"] input';
+  var officeL = '[data-label="TF-Live-Office"] input';
 
+  var current;
   // Format the phone number as the user types it
-  $(cell1).keyup(function(evt) {
-    var phoneNumber = $(cell1);
-    var formatted = phoneFormat($(cell1).val());
+  $('input').keyup(function(evt) {
+    console.log('attribute:', $(this).parent().data())
+
+    var parent = $(this).parent().data().label;
+
+    switch (parent) {
+      case 'TF-Form-Cell':
+        current = cellF;
+        break;
+      case 'TF-Live-Cell':
+        current = cellF;
+        break;
+      case 'TF-Form-Fax':
+        current = faxF;
+        break;
+      case 'TF-Live-Fax':
+        current = faxF;
+        break;
+      case 'TF-Form-Office':
+        current = officeF;
+        break;
+      case 'TF-Live-Office':
+        current = officeF;
+        break;
+    }
+
+    var phoneNumber = $(current);
+    var formatted = phoneFormat($(current).val());
 
     var charCode = (evt.which)
       ? evt.which
