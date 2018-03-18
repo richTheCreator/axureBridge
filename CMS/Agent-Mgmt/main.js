@@ -17,10 +17,6 @@ $(document).ready(function() {
     phoneNumber.val(formatted)
   });
 
-  // Init on page load
-  var format = phoneFormat($(cell1).val());
-  $(cell1).val(format);
-
   // Only integers
   function numberPressed(evt) {
     var charCode = (evt.which)
