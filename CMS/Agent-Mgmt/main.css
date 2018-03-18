@@ -12,8 +12,13 @@
 
 /*  input cursor override for office locations*/
 
-[data-label="TF-Live-OfficeLocation"] input {
+[data-label="TF-Live-OfficeLocation"] input, [data-label="TF-Form-Address"] input{
   cursor: pointer !important
+}
+
+/*  remove drag to resize on inputs*/
+ textarea {
+  resize:none;
 }
 
 /*----- FORM EDITOR -----*/
