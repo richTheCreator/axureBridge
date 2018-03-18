@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 // USA PHONE NUMBER FORMATTING
   // list of axure cell inputs
-  var cell1 = '[data-label="TF-Form-Cell" input]';
+  var cell1 = '[data-label="TF-Form-Cell"] input';
 
   // Format the phone number as the user types it
   $(cell1).addEventListener('keyup', function(evt) {
