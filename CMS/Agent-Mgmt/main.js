@@ -23,19 +23,19 @@ $(document).ready(function() {
         current = cellF;
         break;
       case 'TF-Live-Cell':
-        current = cellF;
+        current = cellL;
         break;
       case 'TF-Form-Fax':
         current = faxF;
         break;
       case 'TF-Live-Fax':
-        current = faxF;
+        current = faxL;
         break;
       case 'TF-Form-Office':
         current = officeF;
         break;
       case 'TF-Live-Office':
-        current = officeF;
+        current = officeL;
         break;
     }
 
