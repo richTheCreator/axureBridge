@@ -15,3 +15,9 @@
 [data-label="TF-Live-OfficeLocation"] input {
   cursor: pointer !important
 }
+
+/*----- FORM EDITOR -----*/
+[data-label="Snackbar"] {
+  left:640px;
+  z-index: 10000;
+}

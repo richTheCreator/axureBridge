@@ -12,12 +12,12 @@ $(document).ready(function() {
 // javascript: void function load() {
 //
 //   var link = document.createElement('link');
-//   link.href = "https://rawgit.com/richTheCreator/axureBridge/master/main.css";
-//   link.rel = "stylesheet";
-//   link.type = "text/css";
+//   link.href = 'https://rawgit.com/richTheCreator/axureBridge/master/CMS/Agent-Mgmt/main.css';
+//   link.rel = 'stylesheet';
+//   link.type = 'text/css';
 //
 //   var s = document.createElement('script');
 //   s.type = 'text/javascript';
-//   s.src = 'https://rawgit.com/richTheCreator/axureBridge/master/main.js';
+//   s.src = 'https://rawgit.com/richTheCreator/axureBridge/master/CMS/Agent-Mgmt/main.js';
 //   $("head").append(s, link);
 // }()
