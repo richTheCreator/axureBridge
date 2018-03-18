@@ -7,8 +7,8 @@ $(document).ready(function() {
   var cell1 = '[data-label="TF-Form-Cell" input]';
 
   // Format the phone number as the user types it
-  cell1.addEventListener('keyup', function(evt) {
-    var phoneNumber = cell1;
+  $(cell1).addEventListener('keyup', function(evt) {
+    var phoneNumber = $(cell1);
     var charCode = (evt.which)
       ? evt.which
       : evt.keyCode;
@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
 
   // We need to manually format the phone number on page load
-  cell1.value = phoneFormat(cell1);
+  $(cell1).value = phoneFormat($(cell1));
 
   // A function to determine if the pressed key is an integer
   function numberPressed(evt) {
