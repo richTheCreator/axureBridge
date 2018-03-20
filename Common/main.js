@@ -85,35 +85,12 @@ $(document).ready(function() {
   }
 
   // ----- DISABLE SCROLLING IOS MODELS -----
-  var bodyScrollTop;
-
-  var setBodyUnscrollable = function(value) {
-    if (value)
-      bodyScrollTop = document.body.scrollTop;
-    document.body.style.overflow = (value)
-      ? 'hidden'
-      : '';
-    document.body.style.position = (value)
-      ? 'fixed'
-      : '';
-    document.body.style.left = (value)
-      ? '0'
-      : '';
-    document.body.style.right = (value)
-      ? '0'
-      : '';
-    document.body.style.top = (value)
-      ? -bodyScrollTop + 'px'
-      : '';
-    if (!value)
-      document.body.scrollTop = bodyScrollTop;
-    }
 
   $('[data-label="iOS-NoScroll"]').click(function() {
-    setBodyUnscrollable(true)
+    document.ontouchmove = function(e){ e.preventDefault(); }
   });
   $('[data-label="iOS-Scroll"]').click(function() {
-    setBodyUnscrollable(false)
+    document.ontouchmove = function(e){ return true; }
   });
 
 })
