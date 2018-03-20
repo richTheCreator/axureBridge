@@ -93,6 +93,21 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
+  $('[data-label="iOS-NoScroll"]').click(function() {
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100 %';
+    document.body.style.width = '100 %';
+    document.body.style.position = 'fixed';
+
+  });
+  $('[data-label="iOS-Scroll"]').click(function() {
+    document.body.style.overflow = 'auto';
+    document.body.style.height = '100%';
+    document.body.style.width = '378px'
+    document.body.style.position = 'static';
+
+  });
+
 })
 
 // javascript: void function load() {
