@@ -84,13 +84,28 @@ $(document).ready(function() {
     return input;
   }
 
-  // ----- DISABLE SCROLLING IOS MODELS -----
+  var urlParams = new URLSearchParams(window.location.search);
+  var hideAnot = urlParams.get('anot')); // none
 
-  $('[data-label="iOS-NoScroll"]').click(function() {
-    document.ontouchmove = function(e){ e.preventDefault(); }
-  });
-  $('[data-label="iOS-Scroll"]').click(function() {
-    document.ontouchmove = function(e){ return true; }
-  });
+  if(hideAnot == 'none'){
+    $('.annotation').css({display:none})
+    console.log('hidden annotations')
+  }
+
 
 })
+
+// javascript: void function load() {
+//   var link = document.createElement('link');
+//
+//   var link = document.createElement('link');
+//   link.href = 'https://rawgit.com/richTheCreator/axureBridge/master/Website/main.css';
+//   link.rel = 'stylesheet';
+//   link.type = 'text/css';
+//
+//   var s = document.createElement('script');
+//   s.type = 'text/javascript';
+//   s.src = 'https://rawgit.com/richTheCreator/axureBridge/master/Common/main.js';
+//   $("head").append(s, link);
+//
+// }()
