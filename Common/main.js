@@ -92,26 +92,30 @@ $(document).ready(function() {
     $('.annotation').css({display: 'none'})
     console.log('hidden annotations')
   }
-
-  $('[data-label="iOS-NoScroll"]').click(function() {
-    console.log('CLICKED-noScroll')
-    document.body.style.overflow = 'hidden';
-    document.body.style.height = '100%';
-    document.body.style.width = '100% !important';
-    document.body.style.position = 'fixed';
-
-  });
-  $('[data-label="iOS-Scroll"]').click(function() {
-    console.log('CLICKED-Scroll')
-    document.body.style.overflow = 'auto';
-    document.body.style.height = '100%';
-    document.body.style.width = '378px'
-    document.body.style.position = 'static';
-
-  });
+  // 
+  // $('[data-label="iOS-NoScroll"]').click(function() {
+  //   console.log('CLICKED-noScroll')
+  //   document.body.style.overflow = 'hidden';
+  //   document.body.style.height = '100%';
+  //   document.body.style.width = '100% !important';
+  //   document.body.style.position = 'fixed';
+  //
+  // });
+  // $('[data-label="iOS-Scroll"]').click(function() {
+  //   console.log('CLICKED-Scroll')
+  //   document.body.style.overflow = 'auto';
+  //   document.body.style.height = '100%';
+  //   document.body.style.width = '378px'
+  //   document.body.style.position = 'static';
+  //
+  // });
 
 })
 
+javascript: void function load() {
+  console.log('CLICKED_IN_AXURE')
+  $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'})
+}()
 // javascript: void function load() {
 //   var s = document.createElement('script');
 //   s.type = 'text/javascript';
