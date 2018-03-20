@@ -1,0 +1,28 @@
+/*----- LIVE EDITOR -----*/
+
+/*  fixing r-drawer to site*/
+
+[data-label="R-Nav Page"] {
+  left: 1277px !important
+}
+
+[data-label="DP-Live-Agent"], [data-label="DP-Live-Header"], [data-label="DP-Save-Rnav"] {
+  left: 1281px
+}
+
+/*  input cursor override for office locations*/
+
+[data-label="TF-Live-OfficeLocation"] input, [data-label="TF-Form-Address"] input{
+  cursor: pointer !important
+}
+
+/*  remove drag to resize on inputs*/
+ textarea {
+  resize:none;
+}
+
+/*----- FORM EDITOR -----*/
+[data-label="Snackbar"] {
+  left:640px !important;
+  z-index: 10000 !important;
+}
