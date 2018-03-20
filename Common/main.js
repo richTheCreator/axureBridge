@@ -84,30 +84,20 @@ $(document).ready(function() {
     return input;
   }
 
-
   //hide annotations for usertesting
   var urlParams = new URLSearchParams(window.location.search);
   var hideAnot = urlParams.get('anot'); // none
 
-  if(hideAnot == 'none'){
-    $('.annotation').css({display:none})
+  if (hideAnot == 'none') {
+    $('.annotation').css({display: none})
     console.log('hidden annotations')
   }
-
 
 })
 
 // javascript: void function load() {
-//   var link = document.createElement('link');
-//
-//   var link = document.createElement('link');
-//   link.href = 'https://rawgit.com/richTheCreator/axureBridge/master/Website/main.css';
-//   link.rel = 'stylesheet';
-//   link.type = 'text/css';
-//
 //   var s = document.createElement('script');
 //   s.type = 'text/javascript';
 //   s.src = 'https://rawgit.com/richTheCreator/axureBridge/master/Common/main.js';
-//   $("head").append(s, link);
-//
+//   $("head").append(s);
 // }()
