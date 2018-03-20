@@ -87,7 +87,7 @@ $(document).ready(function() {
   // ----- DISABLE SCROLLING IOS MODELS -----
   var bodyScrollTop;
 
-  setBodyUnscrollable(value) {
+  var setBodyUnscrollable = function(value) {
     if (value)
       bodyScrollTop = document.body.scrollTop;
     document.body.style.overflow = (value)
