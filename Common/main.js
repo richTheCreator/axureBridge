@@ -84,8 +84,10 @@ $(document).ready(function() {
     return input;
   }
 
+
+  //hide annotations for usertesting
   var urlParams = new URLSearchParams(window.location.search);
-  var hideAnot = urlParams.get('anot')); // none
+  var hideAnot = urlParams.get('anot'); // none
 
   if(hideAnot == 'none'){
     $('.annotation').css({display:none})
