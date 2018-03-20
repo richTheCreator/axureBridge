@@ -92,7 +92,7 @@ $(document).ready(function() {
     $('.annotation').css({display: 'none'})
     console.log('hidden annotations')
   }
-  // 
+  //
   // $('[data-label="iOS-NoScroll"]').click(function() {
   //   console.log('CLICKED-noScroll')
   //   document.body.style.overflow = 'hidden';
@@ -112,10 +112,10 @@ $(document).ready(function() {
 
 })
 
-javascript: void function load() {
-  console.log('CLICKED_IN_AXURE')
-  $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'})
-}()
+// javascript: void function load() {
+//   console.log('CLICKED_IN_AXURE')
+//   $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'})
+// }()
 // javascript: void function load() {
 //   var s = document.createElement('script');
 //   s.type = 'text/javascript';
