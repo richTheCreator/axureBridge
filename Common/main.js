@@ -95,8 +95,8 @@ $(document).ready(function() {
 
   $('[data-label="iOS-NoScroll"]').click(function() {
     document.body.style.overflow = 'hidden';
-    document.body.style.height = '100 %';
-    document.body.style.width = '100 %';
+    document.body.style.height = '100%';
+    document.body.style.width = '100% !important';
     document.body.style.position = 'fixed';
 
   });
