@@ -110,7 +110,10 @@ $(document).ready(function() {
     }
 
   $('[data-label="iOS-NoScroll"]').click(function() {
-    alert('FIRED!')
+    setBodyUnscrollable(true)
+  });
+  $('[data-label="iOS-Scroll"]').click(function() {
+    setBodyUnscrollable(false)
   });
 
 })
