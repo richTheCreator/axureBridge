@@ -89,7 +89,7 @@ $(document).ready(function() {
   var hideAnot = urlParams.get('anot'); // none
 
   if (hideAnot == 'none') {
-    $('.annotation').css({display: none})
+    $('.annotation').css({display: 'none'})
     console.log('hidden annotations')
   }
 
