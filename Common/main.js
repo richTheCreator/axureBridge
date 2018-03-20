@@ -94,6 +94,7 @@ $(document).ready(function() {
   }
 
   $('[data-label="iOS-NoScroll"]').click(function() {
+    console.log('CLICKED-noScroll')
     document.body.style.overflow = 'hidden';
     document.body.style.height = '100%';
     document.body.style.width = '100% !important';
@@ -101,6 +102,7 @@ $(document).ready(function() {
 
   });
   $('[data-label="iOS-Scroll"]').click(function() {
+    console.log('CLICKED-Scroll')
     document.body.style.overflow = 'auto';
     document.body.style.height = '100%';
     document.body.style.width = '378px'
