@@ -109,7 +109,7 @@ $(document).ready(function() {
       document.body.scrollTop = bodyScrollTop;
     }
 
-  $('[data-label="iOS-NoScroll"] div').click(function() {
+  $('[data-label="iOS-NoScroll"]').click(function() {
     alert('FIRED!')
   });
 
