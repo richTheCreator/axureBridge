@@ -93,6 +93,8 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
+  console.log('$axure --------------------> '$axure,)
+
   $axure('@iOS-NoScroll').$().click(function(){
     console.log('FIRED with $axure');
     $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
