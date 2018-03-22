@@ -93,7 +93,7 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
-  console.log('$axure --------------------> '$axure,)
+  console.log('$axure --------------------> ',$axure)
 
   $axure('@iOS-NoScroll').$().click(function(){
     console.log('FIRED with $axure');
