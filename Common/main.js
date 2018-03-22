@@ -93,13 +93,12 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
-  
-  $axure('@iOS-NoScroll').click(function() {
+  $axure('@iOS-NoScroll').$().click(function(){
     console.log('FIRED with $axure');
     $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
   });
 
-  $axure('@iOS-Scroll').click(function() {
+  $axure('@iOS-Scroll').$().click(function(){
     console.log('FIRED with $axure');
     $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
   });
