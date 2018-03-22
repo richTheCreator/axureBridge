@@ -93,30 +93,17 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
-  console.log('$axure --------------------> ',$axure)
-
-  $axure('@iOS-NoScroll').$().click(function(){
+  $axure('@iOS-NoScroll').click(function() {
     console.log('FIRED with $axure');
     $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
   });
 
-  $axure('@iOS-Scroll').$().click(function(){
-    console.log('FIRED with $axure');
+  $axure('@iOS-Scroll').$().click(function() {
+    console.log('FIRED with $axure.$');
     $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
   });
 
 })
-
-
-//----- iOS No-Scroll - drop in
-// javascript: console.log('CLICKED_IN_AXURE');
-// $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
-// void(0);
-
-//----- iOS Scroll - drop in
-// javascript: console.log('CLICKED_IN_AXURE');
-// $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
-// void(0);
 
 //----- PASTE BELOW INTO AXURE TO USE THIS FILE
 // javascript: void function load() {
