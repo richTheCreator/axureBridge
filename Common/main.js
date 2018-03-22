@@ -92,30 +92,32 @@ $(document).ready(function() {
     $('.annotation').css({display: 'none'})
     console.log('hidden annotations')
   }
-  //
-  // $('[data-label="iOS-NoScroll"]').click(function() {
-  //   console.log('CLICKED-noScroll')
-  //   document.body.style.overflow = 'hidden';
-  //   document.body.style.height = '100%';
-  //   document.body.style.width = '100% !important';
-  //   document.body.style.position = 'fixed';
-  //
-  // });
-  // $('[data-label="iOS-Scroll"]').click(function() {
-  //   console.log('CLICKED-Scroll')
-  //   document.body.style.overflow = 'auto';
-  //   document.body.style.height = '100%';
-  //   document.body.style.width = '378px'
-  //   document.body.style.position = 'static';
-  //
-  // });
+
+  
+  $axure('@iOS-NoScroll').click(function() {
+    console.log('FIRED with $axure');
+    $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
+  });
+
+  $axure('@iOS-Scroll').click(function() {
+    console.log('FIRED with $axure');
+    $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
+  });
 
 })
 
-// javascript: void function load() {
-//   console.log('CLICKED_IN_AXURE')
-//   $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'})
-// }()
+
+//----- iOS No-Scroll - drop in
+// javascript: console.log('CLICKED_IN_AXURE');
+// $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
+// void(0);
+
+//----- iOS Scroll - drop in
+// javascript: console.log('CLICKED_IN_AXURE');
+// $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
+// void(0);
+
+//----- PASTE BELOW INTO AXURE TO USE THIS FILE
 // javascript: void function load() {
 //   var s = document.createElement('script');
 //   s.type = 'text/javascript';
