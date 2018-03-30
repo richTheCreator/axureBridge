@@ -26,3 +26,7 @@
   left:640px !important;
   z-index: 10000 !important;
 }
+
+[data-label="No-Hover"] {
+  pointer-events: none;
+}
