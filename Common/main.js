@@ -93,22 +93,6 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
-  $("input").change(function() {
-    $('[data-label="List-AgentName"] span').each(function() {
-      var searchVal = $("input").val();
-      var spanVal = $(this).text().slice(0, [searchVal.length]);
-
-      if ((searchVal.length > 0) && (spanVal === searchVal)) {
-        console.log('match:', spanVal, '=', searchVal);
-
-        $(this).html(function(i, v) {
-          console.log('CALLED REPLACE');
-          return v.replace(spanVal, "<strong>" + searchVal + "</strong>")
-        });
-      };
-    });
-  })
-
 })
 
 //----- iOS No-Scroll - drop in
@@ -116,22 +100,21 @@ $(document).ready(function() {
 // void(0);
 // ----- iOS No-Scroll - drop in
 
-// javascript: $('[data-label="List-AgentName"] span').each(function() {
-//   var searchVal = $("input").val();
-//   var spanVal = $(this).text().slice(0, [searchVal.length]);
+// $("input").change(function() {
+//   $('[data-label="List-AgentName"] span').each(function() {
+//     var searchVal = $("input").val();
+//     var spanVal = $(this).text().slice(0, [searchVal.length]);
 //
-//   if ((searchVal.length > 0) && (spanVal === searchVal)) {
-//     console.log('match:', spanVal, '=', searchVal);
+//     if ((searchVal.length > 0) && (spanVal === searchVal)) {
+//       console.log('match:', spanVal, '=', searchVal);
 //
-//     $(this).html(function(i, v) {
-//       console.log('CALLED REPLACE');
-//       return v.replace(spanVal, "<strong>" + spanVal + "</strong>")
-//     });
-//   };
-// });
-//
-// void(0);
-
+//       $(this).html(function(i, v) {
+//         console.log('CALLED REPLACE');
+//         return v.replace(spanVal, "<strong>" + searchVal + "</strong>")
+//       });
+//     };
+//   });
+// })
 //----- iOS Scroll - drop in
 // javascript: $('body').css({'overflow': 'auto', 'height': '100%', 'width': '378px', 'position': 'static'});
 // void(0);
