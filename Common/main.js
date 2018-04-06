@@ -93,10 +93,42 @@ $(document).ready(function() {
     console.log('hidden annotations')
   }
 
+  $('[data-label="List-AgentName"] span').each(function() {
+    var searchVal = $("input").val();
+    var spanVal = $(this).text().slice(0, [searchVal.length]);
+
+    if ((searchVal.length > 0) && (spanVal === searchVal)) {
+      console.log('match:', spanVal, '=', searchVal);
+
+      $(this).html(function(i, v) {
+        console.log('CALLED REPLACE');
+        return v.replace(spanVal, "<strong>" + searchVal + "</strong>")
+      });
+    };
+  });
+
 })
 
 //----- iOS No-Scroll - drop in
 // javascript: $('body').css({'overflow': 'hidden', 'height': '100%', 'width': '100% !important', 'position': 'fixed'});
+// void(0);
+// ----- iOS No-Scroll - drop in
+
+
+// javascript: $('[data-label="List-AgentName"] span').each(function() {
+//   var searchVal = $("input").val();
+//   var spanVal = $(this).text().slice(0, [searchVal.length]);
+//
+//   if ((searchVal.length > 0) && (spanVal === searchVal)) {
+//     console.log('match:', spanVal, '=', searchVal);
+//
+//     $(this).html(function(i, v) {
+//       console.log('CALLED REPLACE');
+//       return v.replace(spanVal, "<strong>" + searchVal + "</strong>")
+//     });
+//   };
+// });
+//
 // void(0);
 
 //----- iOS Scroll - drop in
