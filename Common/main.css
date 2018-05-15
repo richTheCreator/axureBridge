@@ -1,3 +1,12 @@
 [data-label="No-Hover"] {
   pointer-events: none;
 }
+
+.marker {
+  background-image: url('https://i.imgur.com/qJe9NyM.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
